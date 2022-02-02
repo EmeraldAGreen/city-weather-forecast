@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- could do a google fonts link here if we want -->
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <nav>
+        <h1>Weather Dashboard</h1>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <input type="text" class="row form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    <button class="row btn btn-primary" type="submit">Search</button>
+                </div>
+                <div class="col-9">
+                    <section>
+                        <div id="currentCityWeather" class="card-body">
+                            <h2 class="card-title">Atlanta (3/30/2021)</h2>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                          </ul>
+                    </section>
+                    <section>
+                        <h2>5-Day Forecast</h2>
+                        <div class="card-group">
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                              </div>   
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                </div>   
+                              </div>
+                              <div class="card">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                </div>   
+                              </div>
+                          </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- <section>
+            <div id="currentCityWeather"></div>
+            <div id="fiveDayWeather" class="row">
+
+            </div>
+        </section> -->
+    </main>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

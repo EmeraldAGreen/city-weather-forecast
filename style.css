@@ -1,0 +1,9 @@
+nav h1 { 
+    text-align: center;
+    /* make it gradiet color with linear gradient */
+}
+
+.container { 
+    padding: 0%;
+    margin: 4%;
+}
