@@ -18,53 +18,78 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-3">
-                    <input type="text" class="row form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <div  class="col-3">
+                    <h2>Search for a City:</h2>
+                    <input id= "cityInput" type="text"  class="row form-control" placeholder="Chicago" aria-label="Chicago" aria-describedby="basic-addon1">
+                    <br>
                     <button class="row btn btn-primary" type="submit">Search</button>
+                    <div ><ul id="savedSearch"></ul></div>
                 </div>
                 <div class="col-9">
                     <section>
-                        <div id="currentCityWeather" class="card-body">
-                            <h2 class="card-title">Atlanta (3/30/2021)</h2>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          </div>
+                        <div id="currentCityWeather" class="card-title">City,State
+                         </div> 
+                         <p class="card-body"><img id="wicon" src="" alt="Weather Icon"></p>
                           <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                            <li id="Ftemp" class="list-group-item"><span>Temp: -- &#8457</span></li>
+                            <li id="wind-speed" class="list-group-item"><span>Wind: -- MPH</span></li>
+                            <li id="humidity" class="list-group-item"><span>Humidity: -- %</span></li>
+                            <li id="uvi" class="list-group-item"><span>UV Index: </span></li>
                           </ul>
                     </section>
+                    <br>
                     <section>
-                        <h2>5-Day Forecast</h2>
+                        <h2>5-Day Forecast: </h2>
                         <div class="card-group">
                             <div class="card">
                               <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <h5 class="date" class="card-title">Card title</h5>
+                                <p><img class="dicon" src="" alt="Weather Icon"></p>
+                                <ul>  
+                                  <li class="dailyTemp"></li>
+                                  <li class="dailyWindSpeed"></li>
+                                  <li class="dailyHumidity"></li>
+                                </ul>
                               </div>
                             </div>
                             <div class="card">
                               <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                <h5 class="date" class="card-title">Card title</h5>
+                                <ul>  
+                                  <li class="dailyTemp"></li>
+                                  <li class="dailyWindSpeed"></li>
+                                  <li class="dailyHumidity"></li>
+                                </ul>
                               </div>
                             </div>
                             <div class="card">
                               <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <h5 class="date" class="card-title">Card title</h5>
+                                <ul>  
+                                  <li class="dailyTemp"></li>
+                                  <li class="dailyWindSpeed"></li>
+                                  <li class="dailyHumidity"></li>
+                                </ul>
                               </div>   
                             </div>
                             <div class="card">
                                 <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                  <h5 class="date" class="card-title">Card title</h5>
+                                <ul>  
+                                  <li class="dailyTemp"></li>
+                                  <li class="dailyWindSpeed"></li>
+                                  <li class="dailyHumidity"></li>
+                                </ul>
                                 </div>   
                               </div>
                               <div class="card">
                                 <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                  <h5 class="date" class="card-title">Card title</h5>
+                                  <ul>  
+                                    <li class="dailyTemp"></li>
+                                    <li class="dailyWindSpeed"></li>
+                                    <li class="dailyHumidity"></li>
+                                  </ul>
                                 </div>   
                               </div>
                           </div>

@@ -1,9 +1,39 @@
 nav h1 { 
     text-align: center;
-    /* make it gradiet color with linear gradient */
+    background:linear-gradient(to right, blue, darkblue);
+    color:white;
+    font-weight: strong;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: left;
+    font-weight: strong;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    margin-bottom: 0rem;
+
 }
 
 .container { 
     padding: 0%;
     margin: 4%;
 }
+
+.card-body {
+    padding: 0rem;
+    text-align: center;
+}
+
+#currentCityWeather {
+    text-align: center;
+    font-size: 30px;
+    font-weight: strong;
+}
+
