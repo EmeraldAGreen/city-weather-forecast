@@ -8,6 +8,7 @@ var humidityListItem = document.getElementById("humidity")
 var UVIListItem = document.getElementById("uvi")
 var citySearch = []
 var searchesContainer = document.getElementById("savedSearch")
+let theCurrentDate = document.querySelector(".current-date")
 let dailyDate = document.querySelectorAll(".date")
 let theDailyWeatherEl = document.querySelectorAll(".dicon")
 let theDailyTempEl = document.querySelectorAll(".dailyTemp")
@@ -71,6 +72,15 @@ var getWeather = function (theLat, theLon) {
                     console.log(data);
 
                     // Data for the Current/Searched City Panel
+                    let theDate = new Date(data.current.dt*1000)
+                        
+                    let shortDate = theDate.toLocaleString('en-US', {
+                        weekday: 'short',
+                        month: '2-digit',
+                        day: '2-digit',
+                        year: 'numeric'})
+                    theCurrentDate.innerHTML = shortDate
+
                     let theWeatherIconCode = data.current.weather[0].icon
                     var iconurl = "http://openweathermap.org/img/w/" + theWeatherIconCode + ".png"
                     weatherIconEl.src = iconurl
@@ -87,11 +97,12 @@ var getWeather = function (theLat, theLon) {
 
                     let theUV = data.current.uvi
                     UVIListItem.innerHTML = "UV Index: " + theUV
+                    // I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
 
                     // the Five Day forecast
                     for (let i = 0; i < 5; i++) {
             
-                        let theDate = new Date(data.daily[i].dt*1000)
+                        let theDate = new Date(data.daily[i+1].dt*1000)
                         
                         let shortDate = theDate.toLocaleString('en-US', {
                             weekday: 'short',
@@ -131,11 +142,11 @@ function temperatureConverter(valNum) {
     tempConverted = Math.floor(((valNum - 273.15) * 1.8) + 32);
 }
 
-
-
 // use localstorage.getItem to display the recently searched cities
-// currently they display as a , separated list after refresh page
 var searches = localStorage.getItem("city")
 searchesContainer.innerHTML = searches
 
-// 5 day forecast
+// create dynamic button
+// when click button call the function that pushes the city value through the fetch 
+//update the display with the new city
+//update search function to save history and be ready to seach a new city

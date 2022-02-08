@@ -26,9 +26,21 @@ p {
     margin: 4%;
 }
 
-.card-body {
+.current-date {
     padding: 0rem;
     text-align: center;
+}
+
+.btn {
+    margin-left: 30%;
+}
+
+#search {
+    margin-left: 9%;
+}
+
+#cityInput {
+    margin-left: 2%;
 }
 
 #currentCityWeather {
