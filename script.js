@@ -17,7 +17,6 @@ let theDailyHumidityEl= document.querySelectorAll(".dailyHumidity")
 var formSubmitHandler = function (event) {
     event.preventDefault();
     var cityName = cityInput.value.trim();
-    console.log(cityName)
     if (cityName) {
         getCity(cityName);
         cityInput.value = '';
@@ -105,8 +104,8 @@ var getWeather = function (theLat, theLon) {
                         console.log(theDailyWeatherIconCode)
 
                         var dailyIconurl = "http://openweathermap.org/img/w/" + theDailyWeatherIconCode + ".png"
-                        theDailyWeatherEl.src = dailyIconurl
-
+                        theDailyWeatherEl[i].src = dailyIconurl
+                    
                         let theDailyTemp = data.daily[i].temp.max
                         temperatureConverter(theDailyTemp)
                         theDailyTempEl[i].innerHTML = "<span>Temp: </span>" + tempConverted + " <span>&#8457</span>"
@@ -115,7 +114,6 @@ var getWeather = function (theLat, theLon) {
                         theDailyWindspeedEl[i].innerHTML = "Wind: " + theDailyWindspeed + " MPH"
 
                         let theDailyHumidity = data.daily[i].humidity
-                        console.log(theDailyHumidity)
                         theDailyHumidityEl[i].innerHTML = "Humidity: " + theDailyHumidity + " %"
 
                     }
@@ -137,7 +135,6 @@ function temperatureConverter(valNum) {
 
 // use localstorage.getItem to display the recently searched cities
 // currently they display as a , separated list after refresh page
-console.log(citySearch)
 var searches = localStorage.getItem("city")
 searchesContainer.innerHTML = searches
 
