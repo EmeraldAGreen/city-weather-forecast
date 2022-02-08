@@ -98,6 +98,14 @@ var getWeather = function (theLat, theLon) {
                     let theUV = data.current.uvi
                     UVIListItem.innerHTML = "UV Index: " + theUV
                     // I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
+                        if (theUV < 2) {
+                            UVIListItem.style.backgroundColor = "green"
+                        } else if (theUV>2 && theUV<7) {
+                            UVIListItem.style.backgroundColor = "yellow"
+                        }else {
+                            UVIListItem.style.backgroundColor = "red"
+                        }
+        
 
                     // the Five Day forecast
                     for (let i = 0; i < 5; i++) {
