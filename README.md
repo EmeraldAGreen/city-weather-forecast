@@ -8,6 +8,8 @@ The values for the latitude and longitude of a particular city are retreived fro
 
 The weather data from this API is displayed on the HTML page and styled using Bootstrap. 
 ## Screenshot
+![weather dashboard screenshot](https://user-images.githubusercontent.com/95549495/152924409-1feef819-3ddd-4e74-aa72-f29c994c6b64.png)
+
 
 ## Deployed Link
 https://emeraldagreen.github.io/city-weather-forecast/
