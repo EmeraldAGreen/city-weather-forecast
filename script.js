@@ -34,7 +34,7 @@ var formSubmitHandler = function (event) {
 
 var getCity = function (cityName) {
 
-    var geoURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + ",state,country&limit=5&appid=" + apiKey
+    var geoURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&appid=" + apiKey
 
     fetch(geoURL)
         .then(function (response) {
