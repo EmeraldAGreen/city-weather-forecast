@@ -10,6 +10,8 @@ The weather data from this API is displayed on the HTML page and styled using Bo
 ## Screenshot
 ![weather dashboard screenshot](https://user-images.githubusercontent.com/95549495/152924409-1feef819-3ddd-4e74-aa72-f29c994c6b64.png)
 
+![weather dashboard screenshot 2](https://user-images.githubusercontent.com/95549495/155026576-9e49e8a2-85ac-4978-910f-7c7e83089ad9.png)
+
 ## Deployed Link
 https://emeraldagreen.github.io/city-weather-forecast/
 
