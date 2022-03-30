@@ -164,3 +164,8 @@ searches.forEach(city => {
 });}
 
 saveSearches();
+// TODO: add onClick event to the city buttons that calls the fetch functions again/ reloads that city's page
+
+//TODO: automatically clear localStorage on refresh
+
+//TODO: items saved to localStorage render immediately to the HTML w/o requiring the user to refresh to see the buttons
