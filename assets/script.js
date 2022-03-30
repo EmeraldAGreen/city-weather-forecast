@@ -6,7 +6,7 @@ var tempListItem = document.getElementById("Ftemp")
 var windSpeedListItem = document.getElementById("wind-speed")
 var humidityListItem = document.getElementById("humidity")
 var UVIListItem = document.getElementById("uvi")
-var citySearch = []
+var citySearch = JSON.parse(localStorage.getItem("city")) || []
 var searchesContainer = document.getElementById("savedSearch")
 let theCurrentDate = document.querySelector(".current-date")
 let dailyDate = document.querySelectorAll(".date")
@@ -24,10 +24,10 @@ var formSubmitHandler = function (event) {
     } else {
         alert('Please enter a city name');
     }
-    // links the city names to an empty array; .push method adds new items to the array
+   
     citySearch.push(cityName)
     // saves searched city to local storage
-    localStorage.setItem("city", citySearch)
+    localStorage.setItem("city", JSON.stringify(citySearch))
 };
 
 
@@ -46,6 +46,7 @@ var getCity = function (cityName) {
                     let theLat = data[0].lat
                     let theLon = data[0].lon
                     currentCityContainerEl.textContent = data[0].name + ", " + data[0].state
+                    saveSearches();
                     getWeather(theLat, theLon)
                 });
             } else {
@@ -151,10 +152,15 @@ function temperatureConverter(valNum) {
 }
 
 // use localstorage.getItem to display the recently searched cities
-var searches = localStorage.getItem("city")
-searchesContainer.innerHTML = searches
+function saveSearches() {
+    searchesContainer.innerHTML = "";
+    var searches = JSON.parse(localStorage.getItem("city"))
+searches.forEach(city => {
+    let goBack = document.createElement("button");
+    goBack.className  = "btn btn-primary gap-200";
+    goBack.type = "button";
+    goBack.textContent = city;
+    searchesContainer.append(goBack)
+});}
 
-// create dynamic button
-// when click button call the function that pushes the city value through the fetch 
-//update the display with the new city
-//update search function to save history and be ready to seach a new city
+saveSearches();
